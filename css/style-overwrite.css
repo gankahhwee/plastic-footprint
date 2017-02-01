@@ -1,0 +1,10 @@
+
+.main-title h1 { margin-top: 50px; }
+.main-title p { margin-top: 0px; }
+#main { padding-bottom: 50px; }
+input.form-control, select.form-control, textarea.form-control { color: #333; }
+
+/* utilities */
+.margin-top { margin-top: 10px; }
+.margin-right { margin-right: 10px; }
+.margin-left { margin-left: 10px; }
