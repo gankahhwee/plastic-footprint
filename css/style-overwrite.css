@@ -3,8 +3,27 @@
 .main-title p { margin-top: 0px; }
 #main { padding-bottom: 50px; }
 input.form-control, select.form-control, textarea.form-control { color: #333; }
+#middle-wizard { min-height: 400px; }
+ul.floated.auto-width li { width: auto; margin-right: 10px; }
+ul.floated.auto-width h3 { margin-top: 5px; }
+
+.styled-select { 
+    background-image: none;
+    padding-right: 38px;
+}
+.styled-select::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    right: 5px;
+    width: 30px;
+    height: 20px;
+    background: #fbfbfb url(../img/down_arrow_select.png) no-repeat;
+}
 
 /* utilities */
 .margin-top { margin-top: 10px; }
+.margin-bottom { margin-bottom: 10px; }
 .margin-right { margin-right: 10px; }
 .margin-left { margin-left: 10px; }
