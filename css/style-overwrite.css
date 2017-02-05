@@ -22,6 +22,12 @@ ul.floated.auto-width h3 { margin-top: 5px; }
     background: #fbfbfb url(../img/down_arrow_select.png) no-repeat;
 }
 
+/* slider */
+.slider-selection {
+	background-color: #BABABA;
+    background-image: none !important;
+}
+
 /* utilities */
 .margin-top { margin-top: 10px; }
 .margin-bottom { margin-bottom: 10px; }
