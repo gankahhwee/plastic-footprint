@@ -21,6 +21,9 @@ ul.floated.auto-width h3 { margin-top: 5px; }
     height: 20px;
     background: #fbfbfb url(../img/down_arrow_select.png) no-repeat;
 }
+.lead {
+    margin-bottom: 0px;
+}
 
 /* slider */
 .slider-selection {
@@ -33,3 +36,9 @@ ul.floated.auto-width h3 { margin-top: 5px; }
 .margin-bottom { margin-bottom: 10px; }
 .margin-right { margin-right: 10px; }
 .margin-left { margin-left: 10px; }
+.margin-top-lg { margin-top: 30px; }
+.margin-bottom-lg { margin-bottom: 30px; }
+.margin-right-lg { margin-right: 30px; }
+.margin-left-lg { margin-left: 30px; }
+.clear { clear: both; }
+.border-top { border-top: 2px solid #ccc; }
