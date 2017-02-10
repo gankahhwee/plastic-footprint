@@ -12,13 +12,12 @@
 				<meta charset="utf-8">
 				<title>Plastic Footprint Calculator</title>
 				<meta name="description" content="">
-				<meta name="author" content="Ansonika">
 				<!-- Favicons-->
 				<link rel="shortcut icon" href="img/plastic-lite-sg-logo.jpg" type="image/x-icon"/>
-				<link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
-				<link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
-				<link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
-				<link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+				<link rel="apple-touch-icon" type="image/x-icon" href="img/plastic-lite-sg-logo.jpg">
+				<link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/plastic-lite-sg-logo.jpg">
+				<link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/plastic-lite-sg-logo.jpg">
+				<link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/plastic-lite-sg-logo.jpg">
 				<!-- Mobile Specific Metas -->
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<!-- CSS -->
@@ -57,25 +56,25 @@
 				<script src="bootstrap-slider/bootstrap-slider.min.js"></script>
 			</head>
 			<body>
-				<!--<header>
+				<header>
 					<div class="container">
 						<div class="row">
-							<div class="col-md-4 col-xs-3" id="logo"><a href="index.html">Planio Survey template</a></div>
+							<div class="col-md-12 col-xs-12 main-title"><h1>What is Your Plastic Footprint?</h1></div>
 							<div class="btn-responsive-menu"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </div>
-							<nav class="col-md-8 col-xs-9" id="top-nav">
+							<!--<nav class="col-md-7 col-xs-8" id="top-nav">
 								<ul>
 									<li><a href="#" data-toggle="modal" data-target="#myModal">About</a></li>
 									<li><a href="#" id="purchase">Purchase this template</a></li>
 								</ul>
-							</nav>
+							</nav>-->
 						</div>
 					</div>
-				</header>-->
+				</header>
 				<!-- End header -->
-				<div class="container margin-bottom">
+				<div class="container margin-bottom margin-top-lg">
 					<div class="row">
 						<div class="col-md-12 main-title">
-							<h1>What is Your Plastic Footprint?</h1>
+                            <p class="lead">Welcome! This is your first step to going Plastic-Lite.</p>
 						</div>
 					</div>
 				</div>
@@ -91,17 +90,19 @@
 						<form name="example-1" id="wrapped" action="" method="POST" >
 							<div id="middle-wizard">
 								<div class="step">
-									<div class="row">
+									<div class="row welcome">
                                         
 										<div class="col-md-12">
-                                            <p class="lead">Welcome! This is your first step to going Plastic-Lite.</p>
 								            <h3>Enter your personal info</h3>
                                         </div>
                                         
-										<div class="col-md-6">
+										<div class="col-md-5">
+                                            
+                                            <h5>Nickname</h5>
+								            <input type="text" name="nickname" id="nickname"  class="required form-control" placeholder="Your nickname" value="Eco Guardian">
                                             
                                             <h5>Age</h5>
-											<input type="text" name="age" class="required form-control" placeholder="Age" value="30">
+											<input type="text" name="age" class="required form-control" placeholder="Your age" value="30">
                                             
                                             <h5>Gender</h5>
 											<ul class="data-list floated clearfix">
@@ -111,9 +112,9 @@
                                             
                                             <input id="website" name="website" type="text" value="" >
 										</div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-5">
                                             <h5>Country of residence</h5>
-								            <input type="text" name="country" id="country"  class="required form-control" placeholder="Country of residence" value="Singapore">
+								            <input type="text" name="country" id="country"  class="required form-control" placeholder="Your cslidountry of residence" value="Singapore">
                                             
                                             <h5 class="margin-top">Occupation</h5>
 											<ul class="data-list">
@@ -132,6 +133,9 @@
 												</li>
 											</ul>
                                         </div>
+                                        <!--<div class="col-md-">
+                                            <img src="img/eco-guardian.png" width="100%" />
+                                        </div>-->
 									</div>
 								</div>
 								<!-- end step-->
@@ -157,17 +161,23 @@
                                         </li>
                                         <li><h3>, how many plastic bags come into your hands?</h3></li>
                                     </ul>
-                                    <div class="col-md-8 text-center">
-                                        <div class="col-md-12 text-center">
+                                    <div class="col-md-6 text-center">
                                         <img src="img/plastic-items/plastic-bags.jpg" height="150px" width="auto" class="margin-top">
-                                        </div>
-                                        <div class="col-md-6">
                                             <div>
                                                 <div class="lead margin-top">Usual supermarket bags</div>
                                                 <b class="margin-right">0</b>
                                                 <input id="numberSlider" class="bootstrapSlider" data-img="plastic-bag-2.jpg"
-                                                       data-slider-id='numberSlider' type="text" 
+                                                       data-slider-id='numberSlider' type="text"
                                                        data-weight="7" data-slider-min="0" data-slider-max="20"
+                                                       data-slider-step="1" data-slider-value="0"/>
+                                                <b class="margin-left">20</b>
+                                            </div>
+                                            <div>
+                                                <div class="lead margin-top-lg">Grocery weigh bags</div>
+                                                <b class="margin-right">0</b>
+                                                <input id="numberSlider" class="bootstrapSlider" data-img="plastic-bag-2.jpg"
+                                                       data-slider-id='numberSlider' type="text"
+                                                       data-weight="4" data-slider-min="0" data-slider-max="20" 
                                                        data-slider-step="1" data-slider-value="0"/>
                                                 <b class="margin-left">20</b>
                                             </div>
@@ -175,19 +185,8 @@
                                                 <div class="lead margin-top-lg">Department/Pharmacy store bags</div>
                                                 <b class="margin-right">0</b>
                                                 <input id="numberSlider" class="bootstrapSlider" data-img="plastic-bag-2.jpg"
-                                                       data-slider-id='numberSlider' type="text" 
+                                                       data-slider-id='numberSlider' type="text"
                                                        data-weight="12" data-slider-min="0" data-slider-max="20" 
-                                                       data-slider-step="1" data-slider-value="0"/>
-                                                <b class="margin-left">20</b>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div>
-                                                <div class="lead margin-top">Grocery weigh bags</div>
-                                                <b class="margin-right">0</b>
-                                                <input id="numberSlider" class="bootstrapSlider" data-img="plastic-bag-2.jpg"
-                                                       data-slider-id='numberSlider' type="text" 
-                                                       data-weight="4" data-slider-min="0" data-slider-max="20" 
                                                        data-slider-step="1" data-slider-value="0"/>
                                                 <b class="margin-left">20</b>
                                             </div>
@@ -195,22 +194,41 @@
                                                 <div class="lead margin-top-lg">Other odd sized bags (too small for bins)</div>
                                                 <b class="margin-right">0</b>
                                                 <input id="numberSlider" class="bootstrapSlider" data-img="plastic-bag-2.jpg"
-                                                       data-slider-id='numberSlider' type="text" 
+                                                       data-slider-id='numberSlider' type="text"
                                                        data-weight="4" data-slider-min="0" data-slider-max="20" 
                                                        data-slider-step="1" data-slider-value="0"/>
                                                 <b class="margin-left">20</b>
                                             </div>
-                                        </div>
                                     </div>
-                                    <div class="col-md-4 text-center">
-                                        <img src="img/plastic-items/bread-bags.jpg" height="150px" width="auto" class="margin-top">
-                                        <div class="lead margin-top">Bread bags</div>
-                                        <b class="margin-right">0</b>
-                                        <input id="numberSlider" class="bootstrapSlider" data-img="plastic-bag-2.jpg"
-                                               data-slider-id='numberSlider' type="text" 
-                                               data-weight="6" data-slider-min="0" data-slider-max="20" 
-                                               data-slider-step="1" data-slider-value="0"/>
-                                        <b class="margin-left">20</b>
+                                    <div class="col-md-6 text-center">
+                                        <img src="img/plastic-items/bread-bags.png" height="150px" width="auto" class="margin-top">
+                                        <div>
+                                            <div class="lead margin-top">Bread loaf bag</div>
+                                            <b class="margin-right">0</b>
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="bread-bag.jpg"
+                                                   data-slider-id='numberSlider' type="text"
+                                                   data-weight="6" data-slider-min="0" data-slider-max="20" 
+                                                   data-slider-step="1" data-slider-value="0"/>
+                                            <b class="margin-left">20</b>
+                                        </div>
+                                        <div>
+                                            <div class="lead margin-top-lg">Individual bread bag (prepack)</div>
+                                            <b class="margin-right">0</b>
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="bread-bag-prepack.jpg"
+                                                   data-slider-id='numberSlider' type="text"
+                                                   data-weight="4" data-slider-min="0" data-slider-max="20" 
+                                                   data-slider-step="1" data-slider-value="0"/>
+                                            <b class="margin-left">20</b>
+                                        </div>
+                                        <div>
+                                            <div class="lead margin-top-lg">Individual bread bag (from bakery)</div>
+                                            <b class="margin-right">0</b>
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="bun-bag.png"
+                                                   data-slider-id='numberSlider' type="text"
+                                                   data-weight="4" data-slider-min="0" data-slider-max="20" 
+                                                   data-slider-step="1" data-slider-value="0"/>
+                                            <b class="margin-left">20</b>
+                                        </div>
                                     </div>
 								</div>
 								<!-- end step -->
@@ -241,7 +259,7 @@
                                             <img src="img/plastic-items/styrofoam-container.jpg" height="100px" width="auto" class="margin-top">
                                             <div class="lead margin-top">Take-away Styrofoam containers</div>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="styrofoam-container.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text"
                                                    data-weight="15" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <div><b class="margin-right">0 to 20</b></div>
@@ -250,26 +268,26 @@
                                             <img src="img/plastic-items/plastic-container.jpg" height="100px" width="auto" class="margin-top">
                                             <div class="lead text-center margin-top">Take-away plastic containers (rect)</div>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="plastic-container.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="20" data-slider-min="0" data-slider-max="20" 
+                                                   data-slider-id='numberSlider' type="text"
+                                                   data-weight="32" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <div><b class="margin-right">0 to 20</b></div>
                                         </div>
                                         <div class="col-md-3 text-center">
                                             <img src="img/plastic-items/plastic-container-round.jpg" height="100px" width="auto" class="margin-top">
                                             <div class="lead text-center margin-top">Take-away plastic containers (round)</div>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img="plastic-container.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="plastic-container-round.jpg"
+                                                   data-slider-id='numberSlider' type="text"
                                                    data-weight="16" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/><!--450ml-->
                                             <div><b class="margin-right">0 to 20</b></div>
                                         </div>
                                         <div class="col-md-3 text-center">
-                                            <img src="img/plastic-items/plastic-plate.jpg" height="100px" width="auto" class="margin-top">
-                                            <div class="lead text-center margin-top">Disposable plastic or paper plates</div>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img="plastic-plate.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="24" data-slider-min="0" data-slider-max="20" 
+                                            <img src="img/plastic-items/plastic-cup.jpg" height="100px" width="auto" class="margin-top">
+                                            <div class="lead text-center margin-top">Disposable plastic cups</div>
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="plastic-cup.jpg"
+                                                   data-slider-id='numberSlider' type="text"
+                                                   data-weight="19" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <div><b class="margin-right">0 to 20</b></div>
                                         </div>
@@ -279,7 +297,7 @@
                                             <img src="img/plastic-items/plastic-fork.jpg" height="100px" width="auto" class="margin-top">
                                             <div class="lead margin-top">Disposable plastic forks</div>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="plastic-fork.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text"
                                                    data-weight="3" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <div><b class="margin-right">0 to 20</b></div>
@@ -288,7 +306,7 @@
                                             <img src="img/plastic-items/plastic-spoon.jpg" height="100px" width="auto" class="margin-top">
                                             <div class="lead text-center margin-top">Disposable plastic spoons</div>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="plastic-spoon.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text"
                                                    data-weight="2" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <div><b class="margin-right">0 to 20</b></div>
@@ -297,7 +315,7 @@
                                             <img src="img/plastic-items/plastic-straw.png" height="100px" width="auto" class="margin-top">
                                             <div class="lead text-center margin-top">Disposable plastic straws</div>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="plastic-straw.png"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text"
                                                    data-weight="1" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <div><b class="margin-right">0 to 20</b></div>
@@ -306,7 +324,7 @@
                                             <img src="img/plastic-items/plastic-stirrer.jpg" height="100px" width="auto" class="margin-top">
                                             <div class="lead text-center margin-top">Disposable plastic stirrers</div>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="plastic-stirrer.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text"
                                                    data-weight="1" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <div><b class="margin-right">0 to 20</b></div>
@@ -336,32 +354,32 @@
                                         </li>
                                         <li><h3>, how many of the following do you use?</h3></li>
                                     </ul>
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4 text-center margin-bottom-lg">
                                         <img src="img/plastic-items/water-bottles.png" height="140px" width="auto" class="margin-top">
-                                        <div class="lead margin-top margin-bottom"><u>Water bottles</u></div>
-                                        <div class="margin-bottom">
+                                        <div class="lead margin-top margin-bottom-lg"><u>Water bottles</u></div>
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">330ML (event sized)</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="water-bottle.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="16.5" data-slider-min="0" data-slider-max="30" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">30</b><!-- 12, 20, 18 (350) -->
                                         </div>
-                                        <div class="margin-bottom">
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">500ML</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="water-bottle.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="19.4" data-slider-min="0" data-slider-max="30" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">30</b><!-- 21, 27 -->
                                         </div>
-                                        <div class="margin-bottom">
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">1L</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="water-bottle.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="39.5" data-slider-min="0" data-slider-max="30" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">30</b>
@@ -370,20 +388,20 @@
                                             <div class="lead">1.5L</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="water-bottle.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="32.3" data-slider-min="0" data-slider-max="30" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">30</b><!-- 63, 49, 47, 50 -->
                                         </div>
                                     </div>
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4 text-center margin-bottom-lg">
                                         <img src="img/plastic-items/carbonated-drink-bottles.jpg" height="140px" width="auto" class="margin-top margin-bottom">
-                                        <div class="lead margin-bottom"><u>Carbonated drink bottles</u></div>
-                                        <div class="margin-bottom">
+                                        <div class="lead margin-bottom-lg"><u>Carbonated drink bottles</u></div>
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">500ML</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="carbonated-drink-bottle.png"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="27.8" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">20</b><!-- 21, 27 -->
@@ -392,38 +410,38 @@
                                             <div class="lead">1.5L</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="carbonated-drink-bottle.png"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="48.2" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">20</b><!-- 63, 49, 47, 50 -->
                                         </div>
                                     </div>
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4 text-center margin-bottom-lg">
                                         <img src="img/plastic-items/non-chilled-drink-bottles.jpg" height="140px" width="auto" class="margin-top margin-bottom">
-                                        <div class="lead margin-bottom"><u>Non-chilled drink bottles</u></div>
-                                        <div class="margin-bottom">
+                                        <div class="lead margin-bottom-lg"><u>Non-chilled drink bottles</u></div>
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">350ML</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="non-chilled-drink-bottle.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="26.5" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">20</b><!-- 21, 27 -->
                                         </div>
-                                        <div class="margin-bottom">
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">500ML</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="non-chilled-drink-bottle.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="31.6" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">20</b><!-- 21, 27 -->
                                         </div>
-                                        <div class="margin-bottom">
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">1L</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="non-chilled-drink-bottle.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="57.3" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">20</b><!-- 63, 49, 47, 50 -->
@@ -432,20 +450,20 @@
                                             <div class="lead">1.5L</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="non-chilled-drink-bottle.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="62.4" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">20</b><!-- 63, 49, 47, 50 -->
                                         </div>
                                     </div>
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4 text-center margin-bottom-lg">
                                         <img src="img/plastic-items/milk-containers.jpg" height="140px" width="auto" class="margin-top margin-bottom">
-                                        <div class="lead margin-bottom"><u>Milk containers</u></div>
-                                        <div class="margin-bottom">
+                                        <div class="lead margin-bottom-lg"><u>Milk containers</u></div>
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">1L</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="milk-container.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="48.6" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b><!-- 74, 92 -->
@@ -454,29 +472,29 @@
                                             <div class="lead">2L</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="milk-container.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="68.6" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b><!-- 74, 92 -->
                                         </div>
                                     </div>
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4 text-center margin-bottom-lg">
                                         <img src="img/plastic-items/chilled-drink-bottles.jpg" height="140px" width="auto" class="margin-top margin-bottom">
-                                        <div class="lead margin-bottom"><u>Chilled juice containers</u></div>
-                                        <div class="margin-bottom">
+                                        <div class="lead margin-bottom-lg"><u>Chilled juice containers</u></div>
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">250ML</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="chilled-drink-bottle.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="25.7" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b><!-- 74, 92 -->
                                         </div>
-                                        <div class="margin-bottom">
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">500ML</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="chilled-drink-bottle.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="33.6" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b><!-- 74, 92 -->
@@ -485,36 +503,45 @@
                                             <div class="lead">1L</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="chilled-drink-bottle.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="50" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b><!-- 74, 92 -->
                                         </div>
                                     </div>
-								</div>
-								<!-- end step -->
-                                    <!--<div class="col-md-4 text-center">
-                                        <img src="img/plastic-items/chip-bag.jpg" height="140px" width="auto" class="margin-top margin-bottom">
-                                        <div class="lead margin-bottom"><u>Chip bags</u></div>
-                                        <div class="margin-bottom">
-                                            <div class="lead">Small</div>
+                                    <div class="col-md-4 text-center margin-bottom-lg">
+                                        <img src="img/plastic-items/yogurt-bottles.jpg" height="140px" width="auto" class="margin-top margin-bottom">
+                                        <div class="lead margin-bottom-lg"><u>Yogurt containers</u></div>
+                                        <div class="margin-bottom-lg">
+                                            <div class="lead">Small bottles (Yakult, etc)</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img="chip-bag.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="11" data-slider-min="0" data-slider-max="20" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="yogurt-bottle-small.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
+                                                   data-weight="7" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
-                                            <b class="margin-left">20</b>
+                                            <b class="margin-left">10</b><!-- 74, 92 -->
+                                        </div>
+                                        <div class="margin-bottom-lg">
+                                            <div class="lead">Small yogurt cups</div>
+                                            <b class="margin-right">0</b>
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="yogurt-cup-small.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
+                                                   data-weight="8" data-slider-min="0" data-slider-max="10" 
+                                                   data-slider-step="1" data-slider-value="0"/>
+                                            <b class="margin-left">10</b><!-- 74, 92 -->
                                         </div>
                                         <div>
-                                            <div class="lead text-center">Large</div>
+                                            <div class="lead">Yogurt tubs</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img="chip-bag.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="14.1" data-slider-min="0" data-slider-max="20" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="yogurt-tub.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
+                                                   data-weight="30" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
-                                            <b class="margin-left">20</b>
+                                            <b class="margin-left">10</b>
                                         </div>
-                                    </div>-->
+                                    </div>
+								</div>
+								<!-- end step -->
 								<div class="step row hidden">
                                     <h5>Kitchen Needs</h5>
                                     <ul class="data-list floated auto-width clearfix">
@@ -539,77 +566,79 @@
                                     </ul>
                                     <div class="col-md-4 text-center">
                                         <img src="img/plastic-items/egg-tray-12.jpg" height="140px" width="auto" class="margin-top margin-bottom" style="max-width:100%;">
-                                        <div class="lead margin-bottom"><u>Plastic egg trays</u></div>
-                                        <div class="margin-bottom">
+                                        <div class="lead margin-bottom-lg"><u>Plastic egg trays</u></div>
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">12 eggs</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="egg-tray-12.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="32" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">20</b>
                                         </div>
-                                        <div class="margin-bottom">
+                                        <div class="margin-bottom-lg">
                                             <div class="lead text-center margin-top">15 eggs</div>
                                             <b class="margin-right">0</b>
                                             <input id="numberSlider" class="bootstrapSlider" data-img="egg-tray-12.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="41" data-slider-min="0" data-slider-max="20" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">20</b>
                                         </div>
                                     </div>
                                     <div class="col-md-8 text-center">
-                                        <img src="img/plastic-items/cooking-oil.jpg" height="140px" width="auto" class="margin-top margin-bottom">
-                                        <div class="lead margin-bottom"><u>Cooking oil containers</u></div>
+                                        <img src="img/plastic-items/cooking-oil-containers.jpg" height="140px" width="auto" class="margin-top margin-bottom">
+                                        <div class="lead margin-bottom-lg"><u>Cooking oil containers</u></div>
                                     </div>
                                     <div class="col-md-4 text-center">
-                                        <div class="margin-bottom">
+                                        <div class="lead hidden"><u>Cooking oil containers</u></div>
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">500ML</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="29.1" data-slider-min="0" data-slider-max="20" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="cooking-oil-container.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
+                                                   data-weight="29.1" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
-                                            <b class="margin-left">20</b>
+                                            <b class="margin-left">10</b>
                                         </div>
-                                        <div class="margin-bottom">
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">1L</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="50.7" data-slider-min="0" data-slider-max="20" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="cooking-oil-container.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
+                                                   data-weight="50.7" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
-                                            <b class="margin-left">20</b>
+                                            <b class="margin-left">10</b>
                                         </div>
                                         <div>
                                             <div class="lead">2L</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="84" data-slider-min="0" data-slider-max="20" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="cooking-oil-container.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
+                                                   data-weight="84" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
-                                            <b class="margin-left">20</b>
+                                            <b class="margin-left">10</b>
                                         </div>
                                     </div>
                                     <div class="col-md-4 text-center">
-                                        <div class="margin-bottom">
+                                        <div class="lead hidden"><u>Cooking oil containers</u></div>
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">3L</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="113.6" data-slider-min="0" data-slider-max="20" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="cooking-oil-container.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
+                                                   data-weight="113.6" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
-                                            <b class="margin-left">20</b>
+                                            <b class="margin-left">10</b>
                                         </div>
                                         <div>
                                             <div class="lead">5L</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="127.4" data-slider-min="0" data-slider-max="20" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="cooking-oil-container.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
+                                                   data-weight="127.4" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
-                                            <b class="margin-left">20</b>
+                                            <b class="margin-left">10</b>
                                         </div>
                                     </div>
                                     <div class="col-md-4 text-center">
@@ -638,32 +667,32 @@
                                         </li>
                                         <li><h3>, how many of the following do you use?</h3></li>
                                     </ul>
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4 text-center margin-bottom-lg">
                                         <img src="img/plastic-items/toothbrush.png" height="100px" width="auto" class="margin-top">
                                         <div class="lead margin-top">Toothbrush</div>
                                         <b class="margin-right">0</b>
-                                        <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                               data-slider-id='numberSlider' type="text" 
+                                        <input id="numberSlider" class="bootstrapSlider" data-img="toothbrush.png"
+                                               data-slider-id='numberSlider' type="text"
                                                data-weight="18" data-slider-min="0" data-slider-max="10" 
                                                data-slider-step="1" data-slider-value="0"/>
                                         <b class="margin-right">10</b>
                                     </div>
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4 text-center margin-bottom-lg">
                                         <img src="img/plastic-items/toothpaste.jpg" height="100px" width="auto" class="margin-top">
                                         <div class="lead text-center margin-top">Toothpaste (150-200G)</div>
                                         <b class="margin-right">0</b>
-                                        <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                               data-slider-id='numberSlider' type="text" 
+                                        <input id="numberSlider" class="bootstrapSlider" data-img="toothpaste.jpg"
+                                               data-slider-id='numberSlider' type="text"
                                                data-weight="17" data-slider-min="0" data-slider-max="10" 
                                                data-slider-step="1" data-slider-value="0"/>
                                         <b class="margin-right">10</b>
                                     </div>
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4 text-center margin-bottom-lg">
                                         <img src="img/plastic-items/facewash.jpg" height="100px" width="auto" class="margin-top">
                                         <div class="lead text-center margin-top">Facewash</div>
                                         <b class="margin-right">0</b>
-                                        <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                               data-slider-id='numberSlider' type="text" 
+                                        <input id="numberSlider" class="bootstrapSlider" data-img="facewash.jpg"
+                                               data-slider-id='numberSlider' type="text"
                                                data-weight="25" data-slider-min="0" data-slider-max="10" 
                                                data-slider-step="1" data-slider-value="0"/>
                                         <b class="margin-right">10</b>
@@ -671,30 +700,30 @@
                                     <!--<div class="col-md-3 text-center">
                                         <b class="margin-right">0 to 10</b>
                                         <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                               data-slider-id='numberSlider' type="text" 
+                                               data-slider-id='numberSlider' type="text"
                                                data-weight="15" data-slider-min="0" data-slider-max="10" 
                                                data-slider-step="1" data-slider-value="0"/>
                                         <img src="img/plastic-items/mouthwash.jpg" height="100px" width="auto" class="margin-top">
                                         <div class="lead text-center margin-top">Mouthwash</div>
                                     </div>-->
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4 text-center margin-bottom-lg">
                                         <img src="img/plastic-items/shower-gel.jpg" height="140px" width="auto" class="margin-top margin-bottom">
-                                        <div class="lead text-center margin-bottom"><u>Shower gel</u></div>
+                                        <div class="lead text-center margin-bottom-lg"><u>Shower gel</u></div>
                                         
-                                        <div class="margin-bottom">
+                                        <div class="margin-bottom margin-bottom-lg">
                                             <div class="lead">Small bottles</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img="chip-bag.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="shower-gel.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="58.7" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b>
                                         </div>
-                                        <div class="margin-bottom">
+                                        <div class="margin-bottom margin-bottom-lg">
                                             <div class="lead text-center">Large bottles</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img="chip-bag.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="shower-gel.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="98.9" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b>
@@ -702,8 +731,8 @@
                                         <div>
                                             <div class="lead">Refill packets</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img="chip-bag.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="shower-gel.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="12.7" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b>
@@ -711,22 +740,22 @@
                                     </div>
                                     <div class="col-md-4 text-center">
                                         <img src="img/plastic-items/shampoo.png" height="140px" width="auto" class="margin-top margin-bottom">
-                                        <div class="lead text-center margin-bottom"><u>Shampoo / Conditioner</u></div>
+                                        <div class="lead text-center margin-bottom-lg"><u>Shampoo / Conditioner</u></div>
                                         
-                                        <div class="margin-bottom">
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">Small bottles</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img="chip-bag.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="shampoo.png"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="58.7" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b>
                                         </div>
-                                        <div class="margin-bottom">
+                                        <div class="margin-bottom-lg">
                                             <div class="lead text-center">Large bottles</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img="chip-bag.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="shampoo.png"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="98.9" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b>
@@ -734,8 +763,8 @@
                                         <div>
                                             <div class="lead">Refill packets</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img="chip-bag.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="shampoo.png"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="12.7" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b>
@@ -743,120 +772,25 @@
                                     </div>
                                     <div class="col-md-4 text-center">
                                         <img src="img/plastic-items/handwash.jpg" height="140px" width="auto" class="margin-top margin-bottom">
-                                        <div class="lead text-center margin-bottom"><u>Handwash</u></div>
+                                        <div class="lead text-center margin-bottom-lg"><u>Handwash</u></div>
                                         
-                                        <div class="margin-bottom">
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">Plastic bottles</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img="chip-bag.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="handwash.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="60" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b>
                                         </div>
-                                        <div class="margin-bottom">
+                                        <div class="margin-bottom-lg">
                                             <div class="lead">Refill packets</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img="chip-bag.jpg"
-                                                   data-slider-id='numberSlider' type="text" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="handwash.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
                                                    data-weight="12.7" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b>
-                                        </div>
-                                    </div>
-								</div>
-								<!-- end step -->
-								<!--<div class="step row hidden">
-                                    <h5>Lifestyle: Personal Usage</h5>
-                                    <ul class="data-list floated auto-width clearfix">
-                                        <li><h3>Every</h3></li>
-                                        <li>
-                                            <div class="qty-buttons">
-								                <input type="button" value="1" class="qtyminus" name="quantity">
-								                <input type="text" name="quantity" value="6" class="qty form-control required">
-								                <input type="button" value="+" class="qtyplus" name="quantity">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="styled-select">
-                                                <select class="form-control" name="duration">
-                                                    <option value="52">week</option>
-                                                    <option value="12" selected="selected">month</option>
-                                                    <option value="1">year</option>
-                                                </select>
-                                            </div>
-                                        </li>
-                                        <li><h3>, how many of the following do you use?</h3></li>
-                                    </ul>
-                                    <div class="col-md-4 text-center">
-                                        <img src="img/plastic-items/liquid-containers.jpg" height="170px" width="auto" class="margin-top">
-                                        <div class="lead margin-top">Liquid dispensers</div>
-                                    </div>
-                                    <div class="col-md-4 text-center margin-top">
-                                        <div>
-                                            <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="14" data-slider-min="0" data-slider-max="20" 
-                                                   data-slider-step="1" data-slider-value="0"/>
-                                            <b class="margin-left">10</b>
-                                            <div class="lead">Shower gel (small)</div>
-                                        </div>
-                                        <div>
-                                            <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="14" data-slider-min="0" data-slider-max="20" 
-                                                   data-slider-step="1" data-slider-value="0"/>
-                                            <b class="margin-left">10</b>
-                                            <div class="lead">Shower gel (big)</div>
-                                        </div>
-                                        <div>
-                                            <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="29" data-slider-min="0" data-slider-max="20" 
-                                                   data-slider-step="1" data-slider-value="0"/>
-                                            <b class="margin-left">10</b>
-                                            <div class="lead">Shampoo (small)</div>
-                                        </div>
-                                        <div>
-                                            <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="80" data-slider-min="0" data-slider-max="20" 
-                                                   data-slider-step="1" data-slider-value="0"/>
-                                            <b class="margin-left">10</b>
-                                            <div class="lead">Shampoo (large)</div>
-                                        </div>
-                                        <div>
-                                            <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="68" data-slider-min="0" data-slider-max="20" 
-                                                   data-slider-step="1" data-slider-value="0"/>
-                                            <b class="margin-left">10</b>
-                                            <div class="lead">Conditioner (large)</div>
-                                        </div>
-                                        <div>
-                                            <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="21" data-slider-min="0" data-slider-max="20" 
-                                                   data-slider-step="1" data-slider-value="0"/>
-                                            <b class="margin-left">10</b>
-                                            <div class="lead">Lotion</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 text-center margin-top">
-                                        <div>
-                                            <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="63" data-slider-min="0" data-slider-max="20" 
-                                                   data-slider-step="1" data-slider-value="0"/>
-                                            <b class="margin-left">10</b>
-                                            <div class="lead">Handwash</div>
                                         </div>
                                     </div>
 								</div>
@@ -886,21 +820,21 @@
                                     <div class="col-md-6 text-center">
                                         <img src="img/plastic-items/laundry.jpg" height="180px" width="auto" class="margin-top">
                                         <div class="lead margin-top"><u>Laundry detergent / softener</u></div>
-                                        <div class="margin-top">
+                                        <div class="margin-top-lg">
                                             <div class="lead">Plastic bags / refills</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="30" data-slider-min="0" data-slider-max="20" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="laundry-refill.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
+                                                   data-weight="30" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b>
                                         </div>
-                                        <div class="margin-top">
+                                        <div class="margin-top-lg">
                                             <div class="lead">Plastic bottles</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="205.9" data-slider-min="0" data-slider-max="20" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="laundry-bottle.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
+                                                   data-weight="205.9" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b>
                                         </div>
@@ -908,21 +842,21 @@
                                     <div class="col-md-6 text-center">
                                         <img src="img/plastic-items/dishwash.jpg" height="180px" width="auto" class="margin-top">
                                         <div class="lead margin-top"><u>Dishwash</u></div>
-                                        <div class="margin-top">
+                                        <div class="margin-top-lg">
                                             <div class="lead">Plastic bags / refills</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="13" data-slider-min="0" data-slider-max="20" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="dishwash-refill.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
+                                                   data-weight="13" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b>
                                         </div>
-                                        <div class="margin-top">
+                                        <div class="margin-top-lg">
                                             <div class="lead">Plastic bottles</div>
                                             <b class="margin-right">0</b>
-                                            <input id="numberSlider" class="bootstrapSlider" data-img=""
-                                                   data-slider-id='numberSlider' type="text" 
-                                                   data-weight="54.4" data-slider-min="0" data-slider-max="20" 
+                                            <input id="numberSlider" class="bootstrapSlider" data-img="dishwash-bottle.jpg"
+                                                   data-slider-id='numberSlider' type="text" data-parent="true"
+                                                   data-weight="54.4" data-slider-min="0" data-slider-max="10" 
                                                    data-slider-step="1" data-slider-value="0"/>
                                             <b class="margin-left">10</b>
                                         </div>
@@ -935,10 +869,22 @@
 									<button type="button" name="process" class="submit">Submit the survey</button>-->
                                     
                                     <p class="lead">YOUR PLASTIC FOOTPRINT PER YEAR</p>
-                                    <h2 id="totalWeight"></h2>
-                                    
-                                    <h3>Let's see how much plastic trash you generate a year...</h3>
-                                    <div class="trash"></div>
+                                    <h2 id="totalWeight" class="margin-bottom"></h2>
+                                    <div class="mascott good">
+                                        <img src="img/eco-guardian-happy.png" width="150px">
+                                        <img src="img/speech-good.gif" style="vertical-align: top;">
+                                    </div>
+                                    <div class="mascott ok">
+                                        <img src="img/eco-guardian-ok.png" width="150px">
+                                        <img src="img/speech-ok.gif" style="vertical-align: top;">
+                                    </div>
+                                    <div class="mascott bad">
+                                        <img src="img/eco-guardian-shocked.png" width="150px">
+                                        <img src="img/speech-bad.gif" style="vertical-align: top;">
+                                    </div>
+                                    <h3>Let's see what plastic trash you generate a year...</h3>
+                                    <table id="trash">
+                                    </table>
 								</div>
 								<!-- end submit step -->
 							</div>
@@ -954,30 +900,25 @@
 				</section>
 				<!-- end section main container -->
                 
-				<!--<footer>
+				<footer>
 					<section class="container">
 						<div class="row">
-							<div class="col-md-4">
-								<h3>About us</h3>
-								<p>Lorem ipsum dolor sit amet, duo iudico accusamus ne, at vix sumo alia. Usu etiam probatus ne, eu magna ullum iusto his. Nec ea case eirmod dissentiunt. Etiam denique has cu, nam quando accusamus dissentiunt ne. Ea sit malorum scribentur.</p>
+							<div class="col-md-8">
+								<h3>Disclaimer</h3>
+                                <p>1. The aim of our Plastic Footprint estimator is to calculate an individual’s plastic footprint, and use this information to educate and help reduce the usage of plastics.</p>
+                                <p>2. Plastic Footprint does not require any identifying personal information other than your email id. We request minimal personal information just to help us isolate trends in our results and to indicate repeated use by the same individual.</p>
+                                <p>3. The images used are only for representative purposes, and are not meant to point out any specific brands.</p>
+                                <p>4. Plastic Footprint has made use of real-time weights of standard plastic items, and also cross-checked and corrected based on data available from NEA Packaging benchmarks. The result is only an estimate of your usage based on common daily-use items.</p>
+                                <p>5. This data will only be used for analysis, and will not be shared with any other organizations.</p>
+                                <p>6. The result of our estimator is indicative of your personal plastic footprint, but this might include some aspects of your family usage as well (For e.g. items like cooking oil, laundry detergent).</p>
 							</div>
 							<div class="col-md-4" id="contact">
-								<h3>Contact info</h3>
-								<p>Nec ea case eirmod dissentiunt. Etiam denique has cu, nam quando accusamus dissentiunt ne. </p>
-								<ul>
-									<li><i class="icon-home"></i> 1110 Bates Avenue Los Angeles, CA 90029, US</li>
-									<li><i class="icon-phone"></i> Telephone: 41.22.319.36.10 </li>
-									<li><i class="icon-envelope"></i> Email: <a href="#">info@annova.com </a></li>
-									<li><i class="icon-skype"></i> Skype name: Annova</li>
-								</ul>
-							</div>
-							<div class="col-md-4">
-								<h3>Latest tweet</h3>
-								<div class="latest-tweets" data-number="10" data-username="ansonika" data-mode="fade" data-pager="false" data-nextselector=".tweets-next" data-prevselector=".tweets-prev" data-adaptiveheight="true"></div>
-								<div class="tweet-control">
-									<div class="tweets-prev"></div>
-									<div class="tweets-next"></div>
-								</div>
+								<h3>About</h3>
+								<p>This is an initiative of Plastic Lite Singapore, partnering with Journey to Zero Waste Life in Singapore.</p>
+								<p class="text-center">
+                                    <a href="https://www.facebook.com/SayNoToPlasticsSG/" target="_blank"><img src="img/plastic-lite-sg-logo.jpg" width="49%" /></a>
+									<a href="https://www.facebook.com/groups/ZeroWasteJourneySg/" target="_blank"><img src="img/zero-waste-journey-logo.png" width="49%" /></a>
+								</p>
 							</div>
 						</div>
 					</section>
@@ -986,12 +927,12 @@
 							<div class="row">
 								<div class="col-md-6">
 									<ul id="footer-nav">
-										<li>Copyright© Ansonika </li>
-										<li><a href="#">Terms of Use</a></li>
-										<li><a href="#">Privacy</a></li>
+										<li>Copyright© Plastic Lite Singapore</li>
+										<!--<li><a href="#">Terms of Use</a></li>
+										<li><a href="#">Privacy</a></li>-->
 									</ul>
 								</div>
-								<div class="col-md-6" style="text-align:center">
+								<!--<div class="col-md-6" style="text-align:center">
 									<ul class="social-bookmarks clearfix">
 										<li class="facebook"><a href="#">facebook</a></li>
 										<li class="googleplus"><a href="#">googleplus</a></li>
@@ -999,12 +940,12 @@
 										<li class="delicious"><a href="#">delicious</a></li>
 										<li class="paypal"><a href="#">paypal</a></li>
 									</ul>
-								</div>
+								</div>-->
 							</div>
 						</div>
 					</section>
 				</footer>
-				<div id="toTop">Back to Top</div>-->
+				<div id="toTop">Back to Top</div>
 				<!-- Modal About -->
 				<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
@@ -1044,8 +985,11 @@
 				<script src="js/fancy_func.js" type="text/javascript"></script> 
                 
                 <script type="text/javascript">
-                    var bootstrapSlider = $("input.bootstrapSlider").bootstrapSlider(),
-                        trashContainer = $("div.trash");
+                    var bootstrapSlider = $("input.bootstrapSlider").bootstrapSlider({
+                        tooltip: 'always',
+                        tooltip_position:'bottom'
+                    }),
+                        trashContainer = $("#trash");
                     $("button.forward").click(function(){
                         $("div.step.hidden").removeClass("hidden");
                         trashContainer.children().remove();
@@ -1064,16 +1008,20 @@
                                     sliders = step.find("input.bootstrapSlider");
                                 for(var j=0; j<sliders.length; j++){
                                     var slider = $(sliders[j]),
+                                        itemName = slider.parent().find(".lead").text(),
                                         selectedQuantity = slider.val(),
                                         totalQuantity = Math.round(selectedQuantity * toYear / division),
                                         weight = slider.attr("data-weight"),
                                         img = slider.attr("data-img");
+                                    if(slider.attr("data-parent")=="true"){
+                                        itemName = slider.parent().parent().find(".lead").first().text() + " - " + itemName;
+                                    }
                                     //console.log("- " + slider.attr("data-weight") + " x " + slider.val());
                                     totalWeight += (weight * totalQuantity);
-                                    if(img){
-                                        for(var k=0; k<totalQuantity; k++){
-                                            trashContainer.append("<img src='img/plastic-items/"+img+"' height='70px'>");
-                                        }
+                                    if(img && selectedQuantity > 0){
+                                        //for(var k=0; k<totalQuantity; k++){
+                                            trashContainer.append("<tr><td><img src='img/plastic-items/"+img+"' height='100px'></td><td><h4>"+itemName+"</h4></td><td><h2>X "+totalQuantity+"</h2></td></tr>");
+                                        //}
                                     }
                                 }
                             }
@@ -1081,6 +1029,19 @@
                         var totalWeightKg = Math.round(totalWeight/1000);
                         $("#totalWeight").text(totalWeightKg + " KG");
                         console.log("total = " + totalWeightKg);
+                        $(".mascott").hide(); 
+                        if(totalWeightKg < 50){
+                            $(".mascott.good").show(); 
+                        } else if(totalWeightKg < 100){
+                            $(".mascott.ok").show(); 
+                        } else {
+                            $(".mascott.bad").show(); 
+                        }
+                        
+                        $("html, body").animate({ scrollTop: jQuery("#top-wizard").children().first().offset().top + "px" });
+                    });
+                    $("button.backward").click(function(){
+                        $("html, body").animate({ scrollTop: jQuery("#middle-wizard").offset().top + "px" });
                     });
                 </script>
 			</body>
