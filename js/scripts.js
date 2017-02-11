@@ -1,16 +1,14 @@
-w3IncludeHTML();
 
 var steps = $(".step"), bootstrapSlider, trashContainer;
 
 setTimeout(function(){
-    $.getScript( "js/functions.js", function(){
-        $('.gender-radio').removeClass("hidden");
-        $("div.step.hidden").removeClass("hidden");
+    $("div.step.hidden").removeClass("hidden");
+    
+    bootstrapSlider = $("input.bootstrapSlider").bootstrapSlider({
+        tooltip: 'always',
+        tooltip_position:'bottom'
     });
 },1000);
-setTimeout(function(){
-    $.getScript( "js/quantity-bt.js");
-},2000);
 
 function processResults(){
     trashContainer = $("#trash");
@@ -171,11 +169,6 @@ function processResults(){
 
 $("button.forward").click(function(){
     console.log("forward");
-    
-    bootstrapSlider = $("input.bootstrapSlider").bootstrapSlider({
-        tooltip: 'always',
-        tooltip_position:'bottom'
-    });
     
     if(steps.index($(".step.current")) >= steps.length-2){
         processResults();

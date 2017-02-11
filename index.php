@@ -54,7 +54,7 @@
 				<!-- Bootstrap slider -->
 				<script src="bootstrap-slider/highlight.min.js"></script>
 				<script src="bootstrap-slider/bootstrap-slider.min.js"></script>
-                <script src="http://www.w3schools.com/lib/w3data.js"></script>
+                <!--<script src="http://www.w3schools.com/lib/w3data.js"></script>-->
 			</head>
 			<body>
 				<header>
@@ -72,11 +72,14 @@
 					</div>
 				</header>
 				<!-- End header -->
-				<div class="container margin-bottom margin-top-lg">
+				<div class="container margin-top-lg">
 					<div class="row">
 						<div class="col-md-12 main-title">
                             <p class="lead">Welcome! This is your first step to going Plastic-Lite.</p>
-						</div>
+						</div> 
+                        <p class="text-center">
+                            <a href="#" data-toggle="modal" data-target="#whyModal">WHY GO PLASTIC-LITE?</a>
+                        </p>
 					</div>
 				</div>
 				<section class="container" id="main">
@@ -90,15 +93,15 @@
 						<!-- end top-wizard -->
 						<form name="example-1" id="wrapped" action="" method="POST" >
 							<div id="middle-wizard">
-                                <div class="step row welcome" w3-include-html="steps/step1.html"></div>
-                                <div class="step row hidden" w3-include-html="steps/step2.html"></div>
-                                <div class="step row hidden" w3-include-html="steps/step3.html"></div>
-                                <div class="step row hidden" w3-include-html="steps/step4.html"></div>
-                                <div class="step row hidden" w3-include-html="steps/step5.html"></div>
-                                <div class="step row hidden" w3-include-html="steps/step6.html"></div>
-                                <div class="step row hidden" w3-include-html="steps/step7.html"></div>
-                                <div class="step row hidden" w3-include-html="steps/step8.html"></div>
-                                <div class="step submit hidden" id="complete" w3-include-html="steps/results.html"></div>
+                                <div class="step row welcome"><?php include 'steps/step1.html'; ?></div>
+                                <div class="step row hidden"><?php include 'steps/step2.html'; ?></div>
+                                <div class="step row hidden"><?php include 'steps/step3.html'; ?></div>
+                                <div class="step row hidden"><?php include 'steps/step4.html'; ?></div>
+                                <div class="step row hidden"><?php include 'steps/step5.html'; ?></div>
+                                <div class="step row hidden"><?php include 'steps/step6.html'; ?></div>
+                                <div class="step row hidden"><?php include 'steps/step7.html'; ?></div>
+                                <div class="step row hidden"><?php include 'steps/step8.html'; ?></div>
+                                <div class="step submit hidden" id="complete"><?php include 'steps/results.html'; ?></div>
 							</div>
 							<!-- end middle-wizard -->
 							<div id="bottom-wizard">
@@ -169,22 +172,18 @@
 					</section>
 				</footer>
 				<div id="toTop">Back to Top</div>
-				<!-- Modal About -->
-				<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                
+				<div class="modal fade" id="whyModal" tabindex="-1" role="dialog" aria-labelledby="whyModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-								<h4 class="modal-title" id="myModalLabel">About us</h4>
+								<h4 class="modal-title" id="whyModalLabel">Why go Plastic-Lite?</h4>
 							</div>
 							<div class="modal-body">
-								<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum 
-									sanctus, pro ne quod dicunt sensibus.
-								</p>
-								<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum 
-									sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum 
-									sanctus, pro ne quod dicunt sensibus.
-								</p>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/FjT8GG0ETQg" frameborder="0" allowfullscreen></iframe>
+                                <p>"So ubiquitous and inexpensive are plastics that we've become a single-use, throwaway society. Synthetic plastics <u>do not biodegrade</u>. At best, they break and break again into smaller and smaller pieces. The fact remains that, save those incinerated, every single molecule of synthetic plastic ever created is still on this planet and probably will be for centuries".<br/><span class="text-small">from Breaking the cycle of plastics in the ocean by Andrew Myers <i>Ocean Conservancy Magazine Autumn 2007</i></span></p>
+                                <p>Even though waste in Singapore is incinerated, lots of single-use plastics end up as litter when they are not disposed of properly, or they fall onto the ground due to wind or other reasons, subsequently go into the drain, flush into the canal, then into the sea. Singapore is not a clean city, but a cleaned city. There is plenty of litter here that potentially pollutes the environment.</p>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -198,10 +197,10 @@
 				<script src="js/jquery.placeholder.js"></script>
 				<script src="js/jquery.tweet.min.js"></script>
 				<script src="js/jquery.bxslider.min.js"></script>
-				<!--<script src="js/quantity-bt.js"></script>-->
+				<script src="js/quantity-bt.js"></script>
 				<script src="js/bootstrap.js"></script>
 				<script src="js/retina.js"></script>
-				<!--<script src="js/functions.js"></script>-->
+				<script src="js/functions.js"></script>
 				<!-- FANCYBOX -->
 				<script  src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.4" type="text/javascript"></script> 
 				<script src="js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5" type="text/javascript"></script>

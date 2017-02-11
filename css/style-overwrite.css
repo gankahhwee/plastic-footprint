@@ -37,6 +37,10 @@ ul.floated.auto-width h3 { margin-top: 5px; }
 }*/
 .lead { margin-bottom: 0px; }
 
+label.label_gender {
+    padding-left: 10px !important;
+}
+
 .main-title h1 {
     color: white;
     margin-top: 2px;
@@ -102,3 +106,4 @@ table#trash td {
 .margin-left-lg { margin-left: 30px !important; }
 .clear { clear: both; }
 .border-top { border-top: 2px solid #ccc; }
+.text-small { font-size: 11px; }
