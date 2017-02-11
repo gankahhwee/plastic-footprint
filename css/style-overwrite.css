@@ -10,12 +10,22 @@ input.form-control, select.form-control, textarea.form-control { color: #333; }
 #middle-wizard { min-height: 400px; }
 ul.floated.auto-width li { width: auto; margin-right: 10px; }
 ul.floated.auto-width h3 { margin-top: 5px; }
+@media (max-width: 767px){
+    ul.floated li {
+        float: left;
+    }
+}
+
+#complete { padding-left: 0 !important; padding-right: 0 !important; }
 
 .styled-select { 
     background-image: none;
-    padding-right: 38px;
+    padding-right: 0;
 }
-.styled-select::after {
+.styled-select select {
+    padding-right: 15px;
+}
+/*.styled-select::before {
     content: " ";
     position: absolute;
     top: 50%;
@@ -24,7 +34,7 @@ ul.floated.auto-width h3 { margin-top: 5px; }
     width: 30px;
     height: 20px;
     background: #fbfbfb url(../img/down_arrow_select.png) no-repeat;
-}
+}*/
 .lead { margin-bottom: 0px; }
 
 .main-title h1 {
@@ -47,12 +57,31 @@ ul#footer-nav { margin-top: 10px; }
 table#trash {
     margin-left: auto;
     margin-right: auto;
+    border: 2px solid #aaa;
 }
 
 table#trash td {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.trash-remark {
+    display: none;
+}
+
+.byo {
+    position: relative
+}
+.byo h2 {
+    position: absolute;
+    top: 49px;
+    width: 100%;
+}
+.suggestion h3 { text-transform: uppercase; }
+.suggestion h3.byo { color: #33bb22; }
+.suggestion h3.refuse { color: #cc3322; }
+.suggestion h3.recycle { color: #3322cc; }
+.suggestion h3.refill { color: #cc22cc; }
 
 /* slider */
 .slider-selection {

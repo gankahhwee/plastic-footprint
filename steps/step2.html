@@ -3,9 +3,9 @@
     <li><h3>Every</h3></li>
     <li>
         <div class="qty-buttons">
-            <input type="button" value="1" class="qtyminus" name="quantity">
-            <input type="text" name="quantity" value="1" class="qty form-control required" placeholder="1">
-            <input type="button" value="+" class="qtyplus" name="quantity">
+            <input type="button" value="1" class="qtyminus" name="quantity2">
+            <input type="text" name="quantity2" value="1" class="qty form-control required" placeholder="1">
+            <input type="button" value="+" class="qtyplus" name="quantity2">
         </div>
     </li>
     <li>
@@ -17,15 +17,16 @@
             </select>
         </div>
     </li>
-    <li><h3>, how many plastic bags come into your hands?</h3></li>
+    <li><h3> how many plastic bags come into your hands?</h3></li>
 </ul>
+<p>Click on the slider to select.</p>
 <div class="col-md-6 text-center">
     <img src="img/plastic-items/plastic-bags.jpg" height="150px" width="auto" class="margin-top">
         <div>
             <div class="lead margin-top">Usual supermarket bags</div>
             <b class="margin-right">0</b>
             <input id="numberSlider" class="bootstrapSlider" data-img="plastic-bag-2.jpg"
-                   data-slider-id='numberSlider' type="text"
+                   data-slider-id='numberSlider' type="text" data-byo="bag"
                    data-weight="7" data-slider-min="0" data-slider-max="20"
                    data-slider-step="1" data-slider-value="0"/>
             <b class="margin-left">20</b>
@@ -34,7 +35,7 @@
             <div class="lead margin-top-lg">Grocery weigh bags</div>
             <b class="margin-right">0</b>
             <input id="numberSlider" class="bootstrapSlider" data-img="plastic-bag-2.jpg"
-                   data-slider-id='numberSlider' type="text"
+                   data-slider-id='numberSlider' type="text" 
                    data-weight="4" data-slider-min="0" data-slider-max="20" 
                    data-slider-step="1" data-slider-value="0"/>
             <b class="margin-left">20</b>
@@ -43,12 +44,12 @@
             <div class="lead margin-top-lg">Department/Pharmacy store bags</div>
             <b class="margin-right">0</b>
             <input id="numberSlider" class="bootstrapSlider" data-img="plastic-bag-2.jpg"
-                   data-slider-id='numberSlider' type="text"
+                   data-slider-id='numberSlider' type="text" data-byo="bag"
                    data-weight="12" data-slider-min="0" data-slider-max="20" 
                    data-slider-step="1" data-slider-value="0"/>
             <b class="margin-left">20</b>
         </div>
-        <div>
+        <div class="margin-bottom-lg">
             <div class="lead margin-top-lg">Other odd sized bags (too small for bins)</div>
             <b class="margin-right">0</b>
             <input id="numberSlider" class="bootstrapSlider" data-img="plastic-bag-2.jpg"
@@ -78,11 +79,11 @@
                data-slider-step="1" data-slider-value="0"/>
         <b class="margin-left">20</b>
     </div>
-    <div>
+    <div class="margin-bottom-lg">
         <div class="lead margin-top-lg">Individual bread bag (from bakery)</div>
         <b class="margin-right">0</b>
-        <input id="numberSlider" class="bootstrapSlider" data-img="bun-bag.png"
-               data-slider-id='numberSlider' type="text"
+        <input id="numberSlider" class="bootstrapSlider" data-img="bread-bag-small.jpg"
+               data-slider-id='numberSlider' type="text" data-byo="container"
                data-weight="4" data-slider-min="0" data-slider-max="20" 
                data-slider-step="1" data-slider-value="0"/>
         <b class="margin-left">20</b>

@@ -4,9 +4,9 @@
     <li><h3>Every</h3></li>
     <li>
         <div class="qty-buttons">
-            <input type="button" value="1" class="qtyminus" name="quantity">
-            <input type="text" name="quantity" value="6" class="qty form-control required">
-            <input type="button" value="+" class="qtyplus" name="quantity">
+            <input type="button" value="1" class="qtyminus" name="quantity7">
+            <input type="text" name="quantity7" value="6" class="qty form-control required">
+            <input type="button" value="+" class="qtyplus" name="quantity7">
         </div>
     </li>
     <li>
@@ -18,13 +18,14 @@
             </select>
         </div>
     </li>
-    <li><h3>, how many of the following do you use?</h3></li>
+    <li><h3> how many of the following do you use?</h3></li>
 </ul>
-<div class="col-md-6 text-center">
+<p>Click on the slider to select.</p>
+<div class="col-md-4 text-center">
     <img src="img/plastic-items/laundry.jpg" height="180px" width="auto" class="margin-top">
     <div class="lead margin-top"><u>Laundry detergent / softener</u></div>
     <div class="margin-top-lg">
-        <div class="lead">Plastic bags / refills</div>
+        <div class="lead">Plastic packets / refills</div>
         <b class="margin-right">0</b>
         <input id="numberSlider" class="bootstrapSlider" data-img="laundry-refill.jpg"
                data-slider-id='numberSlider' type="text" data-parent="true"
@@ -36,17 +37,17 @@
         <div class="lead">Plastic bottles</div>
         <b class="margin-right">0</b>
         <input id="numberSlider" class="bootstrapSlider" data-img="laundry-bottle.jpg"
-               data-slider-id='numberSlider' type="text" data-parent="true"
+               data-slider-id='numberSlider' type="text" data-parent="true" data-refill="true"
                data-weight="205.9" data-slider-min="0" data-slider-max="10" 
                data-slider-step="1" data-slider-value="0"/>
         <b class="margin-left">10</b>
     </div>
 </div>
-<div class="col-md-6 text-center">
+<div class="col-md-4 text-center margin-bottom-lg">
     <img src="img/plastic-items/dishwash.jpg" height="180px" width="auto" class="margin-top">
     <div class="lead margin-top"><u>Dishwash</u></div>
     <div class="margin-top-lg">
-        <div class="lead">Plastic bags / refills</div>
+        <div class="lead">Plastic packets / refills</div>
         <b class="margin-right">0</b>
         <input id="numberSlider" class="bootstrapSlider" data-img="dishwash-refill.jpg"
                data-slider-id='numberSlider' type="text" data-parent="true"
@@ -58,9 +59,22 @@
         <div class="lead">Plastic bottles</div>
         <b class="margin-right">0</b>
         <input id="numberSlider" class="bootstrapSlider" data-img="dishwash-bottle.jpg"
-               data-slider-id='numberSlider' type="text" data-parent="true"
+               data-slider-id='numberSlider' type="text" data-parent="true" data-refill="true"
                data-weight="54.4" data-slider-min="0" data-slider-max="10" 
                data-slider-step="1" data-slider-value="0"/>
         <b class="margin-left">10</b>
+    </div>
+</div>
+<div class="col-md-4 text-center margin-bottom-lg">
+    <img src="img/plastic-items/cleaning-detergent-bottles.jpg" height="180px" width="auto" class="margin-top">
+    <div class="lead margin-top"><u>Other cleaning detergent</u></div>
+    <div class="margin-top-lg">
+        <div class="lead">Plastic bottles</div>
+        <b class="margin-right">0</b>
+        <input id="numberSlider" class="bootstrapSlider" data-img="cleaning-detergent-bottle.jpg"
+               data-slider-id='numberSlider' type="text" data-parent="true" data-recycle="true"
+               data-weight="80" data-slider-min="0" data-slider-max="20" 
+               data-slider-step="1" data-slider-value="0"/>
+        <b class="margin-left">20</b>
     </div>
 </div>

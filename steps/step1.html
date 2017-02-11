@@ -1,5 +1,4 @@
 
-
 <div class="col-md-12">
     <h3>Enter your personal info</h3>
 </div>
@@ -7,20 +6,28 @@
 <div class="col-md-5">
 
     <h5>Nickname</h5>
-    <input type="text" name="nickname" id="nickname"  class="required form-control" placeholder="Your nickname" value="Eco Guardian">
+    <input type="text" name="nickname" id="nickname"  class="required form-control" placeholder="Your nickname">
+    <!--<input type="text" name="nickname" id="nickname"  class="required form-control" placeholder="Your nickname" value="Eco Guardian">-->
 
-    <h5>Age</h5>
-    <input type="text" name="age" class="required form-control" placeholder="Your age" value="30">
+    <h5>Email</h5>
+    <input type="email" name="email" id="email"  class="required form-control" placeholder="Your email address">
+    <!--<input type="email" name="email" id="email"  class="required form-control" placeholder="Your email address" value="zerowastejourneysg@gmail.com">-->
 
     <h5>Gender</h5>
-    <ul class="data-list floated clearfix">
+    <ul class="data-list floated clearfix gender-radio hidden">
         <li><input name="gender" type="radio" class="required check_radio" value="Male"><label class="label_gender"> Male</label></li>
-        <li><input name="gender" type="radio" class="required check_radio" value="Female" checked="checked"><label class="label_gender"> Female</label></li>
+        <li><input name="gender" type="radio" class="required check_radio" value="Female"><label class="label_gender"> Female</label></li>
+        <!--<li><input name="gender" type="radio" class="required check_radio" value="Female" checked="checked"><label class="label_gender"> Female</label></li>-->
     </ul>
 
     <input id="website" name="website" type="text" value="" >
 </div>
 <div class="col-md-5">
+
+    <h5>Age</h5>
+    <input type="number" name="age" class="required form-control" placeholder="Your age">
+    <!--<input type="text" name="age" class="required form-control" placeholder="Your age" value="30>-->
+    
     <h5>Country of residence</h5>
     <input type="text" name="country" id="country"  class="required form-control" placeholder="Your cslidountry of residence" value="Singapore">
 
