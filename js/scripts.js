@@ -10,11 +10,15 @@ setTimeout(function(){
     });
     trashContainer = $("#trash");
     
-    $('input[name=gender]').attr("type","radio").addClass("check_radio");
+    /*$('input[name=gender]').attr("type","radio").addClass("check_radio");
     $('input.check_radio').iCheck({
     	checkboxClass: 'icheckbox_square-aero',
    	    radioClass: 'iradio_square-aero'
-    }).show();
+    }).show();*/
+    $('input.check_radio').iCheck({
+    	checkboxClass: 'icheckbox_square-aero',
+   	    radioClass: 'iradio_square-aero'
+    });
 },500);
 
 function processResults(){
