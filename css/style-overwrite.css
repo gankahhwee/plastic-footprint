@@ -1,3 +1,7 @@
+html{
+    background-color: #1ab9a7;
+	/* background-color:#252525; */
+}
 
 .main-title h1 { margin-top: 50px; }
 .main-title p { margin-top: 0px; }

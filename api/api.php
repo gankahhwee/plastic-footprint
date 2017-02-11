@@ -47,7 +47,7 @@ function executeQuery($object, $link, $table, $method, $request){
       case 'DELETE':
         $sql = "delete from `$table` where id=$key"; break;
     }
-    echo $sql;
+    //echo $sql;
 
     // excecute SQL statement
     $result = mysqli_query($link,$sql);

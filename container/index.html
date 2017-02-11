@@ -1,4 +1,4 @@
-<html>
+<html style="background-color: #1ab9a7;">
     <head>
         <meta charset="utf-8">
         <title>Plastic Footprint Estimator</title>
@@ -12,7 +12,14 @@
         <!-- Mobile Specific Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body style="overflow:hidden;">
-        <iframe src="http://plasticfootprint.ryanphung.com/" width="100%" height="100%" style="border:none;"></iframe>
+    <body style="overflow:hidden; margin:0px;">
+        <iframe id="frame" src="http://plasticfootprint.ryanphung.com/" width="100%" height="100%" style="border:none;"></iframe>
     </body>
+    <script type="text/javascript">
+        var frame = document.getElementById("frame");
+        window.onresize = function(event) {
+            document.getElementById("frame").style.height = window.document.body.clientHeight;
+            document.getElementById("frame").style.width = window.document.body.clientWidth;
+        };
+    </script>
 </html> 
