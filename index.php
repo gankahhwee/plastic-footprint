@@ -169,7 +169,7 @@
 							</div>
 						</div>
 					</div>
-				</div>-->
+				</div>
 				<!-- /.modal -->
 				<!-- OTHER JS --> 
 				<script src="js/jquery.validate.js"></script>
@@ -185,6 +185,5 @@
 				<script src="js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5" type="text/javascript"></script>
                 
 				<script src="js/scripts.js"></script>
-                </script>
 			</body>
 		</html>
