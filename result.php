@@ -1,3 +1,52 @@
+<?php
+
+$servername = "localhost";
+$username = "ryanphun_plastic";
+$password = "LovedEarth2016!";
+$dbname = "ryanphun_plastic_footprint";
+ 
+// connect to the mysql database
+$link = mysqli_connect($servername, $username, $password, $dbname);
+mysqli_set_charset($link,'utf8');
+
+$id = $_GET["id"];
+
+$query = "select SUBSTRING_INDEX(entries.name,',',1) as 'Name' , key_values.key as 'Item', key_values.value as 'Value', key_values.remark as 'Remark', CONVERT_TZ(timestamp, 'SYSTEM', '+08:00') as 'Timestamp' from entries, key_values where entries.id = key_values.entry_id and CONCAT(entries.id, SUBSTRING_INDEX(entries.name,',',1) ) = ? order by key_values.id";
+
+$stmt = $link->stmt_init();
+$stmt->prepare($query);
+$stmt->bind_param("s", $id); 
+$stmt->execute();
+
+$result = $stmt->bind_result($nam, $key, $val, $rem, $tim);
+
+$name = '';
+$timestamp = '';
+$totalWeight = 0;
+$totalQuantity = 0;
+$list = array();
+
+while ($stmt->fetch()) {
+    $name = $nam;
+    $timestamp = $tim;
+    if($key == 'totalWeightPerYearKg'){
+        $totalWeight = $val;
+    } elseif($key == 'totalQuantityPerYear'){
+        $totalQuantity = $val;
+    } else {
+        $item = array();
+        $item["label"] = $key;
+        $item["value"] = $val;
+        $item["remark"] = $rem;
+        array_push($list, $item);
+    }
+}
+// close mysql connection
+mysqli_close($link);
+
+?>
+
+
 <!DOCTYPE html>
 <!--[if IE 8 ]>
 <html class="ie ie8" lang="en">
@@ -91,30 +140,58 @@
 					<!-- Start Survey container -->
 					<div id="survey_container">
 						<div id="top-wizard">
-							<strong>Progress <span id="location"></span></strong>
+							<!--<strong>Progress <span id="location"></span></strong>
 							<div id="progressbar"></div>
-							<div class="shadow"></div>
+							<div class="shadow"></div>-->
 						</div>
 						<!-- end top-wizard -->
-						<form name="example-1" id="wrapped" action="" method="POST" >
-							<div id="middle-wizard">
-                                <div class="step row welcome"><?php include 'templates/step1.html'; ?></div>
-                                <div class="step row hidden"><?php include 'templates/step2.html'; ?></div>
-                                <div class="step row hidden"><?php include 'templates/step3.html'; ?></div>
-                                <div class="step row hidden"><?php include 'templates/step4.html'; ?></div>
-                                <div class="step row hidden"><?php include 'templates/step5.html'; ?></div>
-                                <div class="step row hidden"><?php include 'templates/step6.html'; ?></div>
-                                <div class="step row hidden"><?php include 'templates/step7.html'; ?></div>
-                                <div class="step row hidden"><?php include 'templates/step8.html'; ?></div>
-                                <div class="step submit hidden" id="complete"><?php include 'templates/results.html'; ?></div>
-							</div>
-							<!-- end middle-wizard -->
-							<div id="bottom-wizard">
-								<button type="button" name="backward" class="backward">Back</button>
-								<button type="button" name="forward" class="forward">Next </button>
-							</div>
-							<!-- end bottom-wizard -->
-						</form>
+                        <div id="middle-wizard">
+
+                            <p class="lead"><span id="userNickname"><?php echo strtoupper($name); ?></span>, YOUR PLASTIC FOOTPRINT PER YEAR:</p>
+                            <h2 class="margin-bottom-lg margin-top-lg">
+                                <strong id="totalWeight"><u><?php echo $totalWeight; ?></u> KG</strong>
+                                &nbsp;|&nbsp;
+                                <strong id="totalQuantity"><u><?php echo $totalQuantity; ?></u> PIECES</strong>
+                            </h2>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6" style="float:none;margin-left:auto;margin-right:auto;">
+                                    <?php if($totalWeight < 5) { $speechPic = 5; $guardian = 'good'; $guardianPic = 'happy'; }
+                                        elseif($totalWeight < 10) { $speechPic = 4; $guardian = 'ok'; $guardianPic = 'ok'; }
+                                        elseif($totalWeight < 20) { $speechPic = 3; $guardian = 'bad'; $guardianPic = 'shocked'; }
+                                        elseif($totalWeight < 30) { $speechPic = 2; $guardian = 'worst'; $guardianPic = 'agitated'; }
+                                        else { $speechPic = 1; }
+                                    ?>
+                                    <div class="col-xs-5 col-sm-5" style="padding: 0; margin-left: -20px;">
+                                        <img class="mascott <?php echo $guardian; ?>" src="img/eco-guardian-<?php echo $guardianPic; ?>.png" width="180px">
+                                    </div>
+                                    <div class="col-xs-7 col-sm-7" style="padding: 0;">
+                                        <img class="speech speech-<?php echo $speechPic; ?>" 
+                                             src="img/speech/<?php echo $speechPic; ?>.gif">
+                                        <!--<div class="byo">
+                                            <img src="img/speech/byo.gif">
+                                            <h2 id="totalByoSaveWeight"></h2>
+                                        </div>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="margin-top-lg margin-bottom" id="trashTitle">Let's see what plastic trash you generate a year...</h3>
+                            <div style="width: 100%; overflow-x:scroll;">
+                                <table id="trash">
+                                    <?php for ($i=0;$i<count($list);$i++) { ?>
+                                        <tr>
+                                            <td><h4><?php echo $list[$i]["label"]; ?></h4></td>
+                                            <td><h2><?php echo $list[$i]["value"]; ?></h2></td>
+                                        </tr>
+                                    <?php } ?>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- end middle-wizard -->
+                        <div id="bottom-wizard">
+                            <!--<button type="button" name="backward" class="backward">Back</button>
+                            <button type="button" name="forward" class="forward">Next </button>-->
+                        </div>
+                        <!-- end bottom-wizard -->
 					</div>
 					<!-- end Survey container -->
 				</section>
@@ -123,8 +200,8 @@
 				<footer>
 					<section class="container">
 						<div class="row">
-							<div class="col-md-8"><?php include 'templates/disclaimer.html'; ?></div>
-							<div class="col-md-4" id="contact"><?php include 'templates/about.html'; ?></div>
+							<div class="col-md-8"><?php include '../templates/disclaimer.html'; ?></div>
+							<div class="col-md-4" id="contact"><?php include '../templates/about.html'; ?></div>
 						</div>
 					</section>
 					<section id="footer_2">
@@ -169,7 +246,7 @@
 							</div>
 						</div>
 					</div>
-				</div>-->
+				</div>
 				<!-- /.modal -->
 				<!-- OTHER JS --> 
 				<script src="js/jquery.validate.js"></script>

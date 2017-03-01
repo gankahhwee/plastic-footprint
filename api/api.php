@@ -55,7 +55,7 @@ function executeQuery($object, $link, $table, $method, $request){
     // die if SQL statement failed
     if (!$result) {
       http_response_code(404);
-      die(mysqli_error());
+      die(mysqli_error($link));
     }
 
     // print results, insert id or affected row count

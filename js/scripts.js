@@ -69,6 +69,7 @@ function processResults(){
                                                 (byo ? ("<h3 class='byo'>BYO<br/><strong>"+byo+"</strong>") : "") +
                                                 (slider.attr("data-refill") ? ("<h3 class='refill'>Choose<br/><strong>REFILLS</strong>") : "") +
                                                 (slider.attr("data-refuse") ? ("<h3 class='refuse'><strong>REFUSE</strong>") : "") +
+                                                (slider.attr("data-reuse") ? ("<h3 class='reuse'><strong>REUSE</strong>") : "") +
                                                 (slider.attr("data-recycle") ? ("<h3 class='recycle'><strong>RECYCLE</strong>") : "") +
                                               "</h3></td>"+
                                               "</tr>");
@@ -92,12 +93,14 @@ function processResults(){
                               "</tr>");
     }
     
+    $("#userNickname").text($("input[name=nickname]").val().toUpperCase()+", ");
+    
     var totalWeightKg = Math.round(totalWeight/100)/10;
     $("#totalWeight").html("<u>"+totalWeightKg + "</u> KG");
     console.log("total weight = " + totalWeightKg);
     
-    $("#totalQuantity").html("<u>"+totalQuantity + "</u> items");
-    console.log("total quanity = " + totalQuantity);
+    $("#totalQuantity").html("<u>"+totalQuantity + "</u> pieces");
+    console.log("total quantity = " + totalQuantity);
     
     data.values.push({
         key: "totalWeightPerYearKg",
@@ -122,21 +125,21 @@ function processResults(){
         $(".byo").hide();
     }
     
-    if(totalWeightKg < 5 && totalQuantity < 200){
+    if(totalWeightKg < 5/* && totalQuantity < 200*/){
         $(".mascott.good").show(); 
         $(".speech-5").show();
         
-    } else if(totalWeightKg < 20 && totalQuantity < 600){
+    } else if(totalWeightKg < 20/* && totalQuantity < 600*/){
         $(".mascott.ok").show(); 
         
-        if(totalWeightKg < 10 && totalQuantity < 400){
+        if(totalWeightKg < 10/* && totalQuantity < 400*/){
             $(".speech-4").show();
         } else {
             $(".speech-3").show();
         }
         
     } else {
-        if(totalWeightKg < 30 && totalQuantity < 800){
+        if(totalWeightKg < 30/* && totalQuantity < 800*/){
             $(".mascott.bad").show(); 
             $(".speech-2").show();
         } else {
