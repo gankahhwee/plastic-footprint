@@ -149,7 +149,7 @@ function processResults(){
     }
     
     $.ajax({
-        url: "/api/api.php/entries",
+        url: "api/api.php/entries",
         method: "POST",
         contentType: "application/json",
         data: JSON.stringify(data.entry)
@@ -160,7 +160,7 @@ function processResults(){
         }
         console.log(data.values);
         $.ajax({
-            url: "/api/api.php/key_values",
+            url: "api/api.php/key_values",
             method: "POST",
             contentType: "application/json",
             data: JSON.stringify(data.values)
